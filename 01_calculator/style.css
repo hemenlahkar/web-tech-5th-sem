@@ -7,6 +7,7 @@
 body {
   background-image: linear-gradient(#b0c3f3, rgba(196, 196, 196, 0));
   height: 100dvh;
+  min-height: fit-content;
   user-select: none;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   padding-top: 2rem;
