@@ -1,0 +1,35 @@
+<!-- Build a navigation menu using an unordered list (<ul>) with clickable links -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nav Menu</title>
+    <style>
+        nav ul{
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: space-evenly;
+            list-style-type: none;
+        }
+        a {
+          text-decoration: none;
+        }
+        a[target="_blank"]::after {
+            content: '↗';
+        }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="https://hemen.co.in" target="_blank">Author</a></li>
+        <li>
+          <a href="https://github.com/hemenlahkar/web-tech-5th-sem" target="_blank">Github</a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
