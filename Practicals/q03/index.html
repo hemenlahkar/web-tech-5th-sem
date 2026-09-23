@@ -1,0 +1,27 @@
+<!-- Implement a form with input fields for name, email, and a submit button -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+    <main id="container">
+        <form onsubmit="handleSubmit(event)">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="John Doe">
+            </div>
+            <div>
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" placeholder="john@example.com">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+ </body>
+ </html>
