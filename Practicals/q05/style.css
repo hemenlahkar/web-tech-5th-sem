@@ -22,7 +22,7 @@ main {
 img:hover {
     transform: scale(1.05);
 }
-
+/* 
 main:hover img:not(:hover) {
     filter: brightness(0.3) contrast(0.5);
-}
+} */
