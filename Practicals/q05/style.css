@@ -1,0 +1,28 @@
+body {
+    background: black;
+    padding: 14px;
+    color: white;
+}
+
+img {
+    max-width: 400px;
+    border-radius: 30px;
+    border: 5px solid white;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 10px #00000010;
+    width: 100%;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+main {
+    column-width: min(100vw, 350px);
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+main:hover img:not(:hover) {
+    filter: brightness(0.3) contrast(0.5);
+}
