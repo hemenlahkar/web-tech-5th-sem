@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semantic HTML: The Tags That Mean Something</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <hgroup>
+      <h1>Semantic HTML</h1>
+      <p>The tags that actually mean something</p>
+    </hgroup>
+
+    <search>
+      <form role="search">
+        <label for="site-search">Search this article</label>
+        <input type="search" id="site-search" name="q" placeholder="e.g., section, article">
+        <button type="submit">Search</button>
+      </form>
+    </search>
+
+    <nav aria-label="Table of contents">
+      <ul>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#tags">Tags</a></li>
+        <li><a href="#comparison">Comparison</a></li>
+        <li><a href="#forms">Forms</a></li>
+        <li><a href="#media">Media</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <header>
+        <h2>Why semantic HTML matters</h2>
+        <p>
+          Published <time datetime="2026-09-27">September 27, 2026</time>
+          by <address>Hemen Lahkar, <a href="mailto:hemen@hemen.co.in">hemen@hemen.co.in</a></address>
+        </p>
+      </header>
+
+      <section id="intro">
+        <h2>Introduction</h2>
+        <p>
+          <dfn><abbr title="HyperText Markup Language">HTML</abbr></dfn> is full of tags that describe
+          <strong>meaning</strong>, not just appearance. A <code>&lt;div&gt;</code> is a generic box;
+          a <code>&lt;button&gt;</code> is a button. That difference is huge for
+          <em>accessibility</em>.
+        </p>
+
+        <blockquote cite="https://www.w3.org/WAI/fundamentals/accessibility-intro/">
+          <p>The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.</p>
+          <span>— <cite>Tim Berners-Lee</cite></span>
+        </blockquote>
+
+        <p>
+          As <cite>MDN Web Docs</cite> says, <q>Semantic HTML is the foundation of accessibility.</q>
+          You can also use <mark>highlighted text</mark> for emphasis.
+        </p>
+      </section>
+
+      <section id="tags">
+        <h2>Common semantic tags</h2>
+        <p>
+          Here are some tags you should know. Hover over <abbr title="Accessible Rich Internet Applications">ARIA</abbr> to see its meaning.
+          Use <kbd>Ctrl</kbd> + <kbd>U</kbd> to view source. The output is <samp>Hello, world!</samp>.
+          Variables like <var>x</var> and <var>y</var> are often written in <code>code</code>.
+        </p>
+
+        <pre><code>// Example of a code block
+const greeting = "Hello, semantic world!";
+console.log(greeting);</code></pre>
+
+        <p>
+          Chemical formulas like H<sub>2</sub>O and math like E = mc<sup>2</sup> use sub and sup.
+          You can show edits with <ins datetime="2026-09-27">inserted text</ins> and
+          <del datetime="2026-09-26">deleted text</del>. Sometimes <s>strikethrough</s> is used,
+          and <u>underline</u> can be used for proper names in some languages.
+          Use <b>b</b> and <i>i</i> sparingly, and <small>small print</small> for fine details.
+        </p>
+
+        <p>
+          For bidirectional text, <bdi>إيان</bdi> is isolated, and <bdo dir="rtl">this text is reversed</bdo>.
+          Ruby annotations: <ruby>漢 <rp>(</rp><rt>kan</rt><rp>)</rp></ruby>.
+          A long word can break with <wbr> here: super<wbr>cali<wbr>fragilistic<wbr>expialidocious.
+          Use <data value="12345">Product #12345</data> for machine-readable data.
+        </p>
+
+        <figure>
+          <picture>
+            <source media="(min-width: 800px)" srcset="https://picsum.photos/800/400">
+            <source media="(min-width: 400px)" srcset="https://picsum.photos/400/300">
+            <img src="https://picsum.photos/300/200" alt="A diagram showing semantic tags as building blocks">
+          </picture>
+          <figcaption>A picture is worth a thousand words, but an <code>alt</code> attribute is worth even more to a screen reader.</figcaption>
+        </figure>
+
+        <details>
+          <summary>Click to expand a list of semantic tags</summary>
+          <ul>
+            <li><code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code></li>
+            <li><code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;aside&gt;</code></li>
+            <li><code>&lt;footer&gt;</code>, <code>&lt;figure&gt;</code>, <code>&lt;figcaption&gt;</code></li>
+            <li><code>&lt;details&gt;</code>, <code>&lt;summary&gt;</code>, <code>&lt;dialog&gt;</code></li>
+          </ul>
+        </details>
+      </section>
+
+      <section id="comparison">
+        <h2>Semantic vs non-semantic</h2>
+        <table>
+          <caption>Comparison of common elements</caption>
+          <thead>
+            <tr>
+              <th scope="col">Non-semantic</th>
+              <th scope="col">Semantic</th>
+              <th scope="col">Benefit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>&lt;div&gt;</code></td>
+              <td><code>&lt;header&gt;</code></td>
+              <td>Landmark for screen readers</td>
+            </tr>
+            <tr>
+              <td><code>&lt;div&gt;</code></td>
+              <td><code>&lt;nav&gt;</code></td>
+              <td>Identifies navigation</td>
+            </tr>
+            <tr>
+              <td><code>&lt;div&gt;</code></td>
+              <td><code>&lt;main&gt;</code></td>
+              <td>Marks the main content</td>
+            </tr>
+            <tr>
+              <td><code>&lt;div&gt;</code></td>
+              <td><code>&lt;button&gt;</code></td>
+              <td>Focusable and announced as button</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Use semantic tags first; fall back to <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> only when no better element exists.</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <section id="forms">
+        <h2>Semantic forms</h2>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Subscribe to our newsletter</legend>
+
+            <p>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+            </p>
+
+            <p>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </p>
+
+            <p>
+              <label for="topic">Favorite topic</label>
+              <select id="topic" name="topic">
+                <optgroup label="HTML">
+                  <option value="semantic">Semantic HTML</option>
+                  <option value="forms">Forms</option>
+                </optgroup>
+                <optgroup label="CSS">
+                  <option value="layout">Layout</option>
+                  <option value="colors">Colors</option>
+                </optgroup>
+              </select>
+            </p>
+
+            <p>
+              <label for="browser">Preferred browser (datalist)</label>
+              <input list="browsers" id="browser" name="browser">
+              <datalist id="browsers">
+                <option value="Firefox">
+                <option value="Chromium">
+                <option value="WebKit">
+              </datalist>
+            </p>
+
+            <p>
+              <label for="comments">Comments</label>
+              <textarea id="comments" name="comments" rows="3"></textarea>
+            </p>
+
+            <p>
+              <label for="volume">Volume</label>
+              <input type="range" id="volume" name="volume" min="0" max="11" value="7">
+              <output for="volume" name="volumeOutput">7</output>
+            </p>
+
+            <p>
+              <label for="progress">Progress</label>
+              <progress id="progress" value="70" max="100">70%</progress>
+            </p>
+
+            <p>
+              <label for="meter">Meter</label>
+              <meter id="meter" value="0.7" min="0" max="1" low="0.3" high="0.8" optimum="1">70%</meter>
+            </p>
+
+            <button type="submit">Subscribe</button>
+          </fieldset>
+        </form>
+      </section>
+
+      <section id="media">
+        <h2>Media elements</h2>
+        <p>These are also semantic: they tell the browser what kind of content they contain.</p>
+
+        <audio controls>
+          <source src="audio.ogg" type="audio/ogg">
+          <source src="audio.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+        <video controls width="320">
+          <source src="video.mp4" type="video/mp4">
+          <track kind="captions" src="captions.vtt" srclang="en" label="English">
+          Your browser does not support the video element.
+        </video>
+      </section>
+    </article>
+
+    <aside>
+      <h2>Did you know?</h2>
+      <p>
+        The <code>&lt;aside&gt;</code> element represents content that is tangentially related to the content around it.
+        Screen readers can announce it as a complementary landmark.
+      </p>
+      <p>
+        <mark>Mark my words:</mark> semantic HTML is not just for SEO. It is for people.
+      </p>
+      <p>
+        Last updated: <time datetime="2026-09-27T12:00:00Z">September 27, 2026 at 12:00 UTC</time>.
+      </p>
+    </aside>
+  </main>
+
+  <footer>
+    <p>© 2026 Semantic HTML Demo. All rights reserved.</p>
+    <address>
+      Contact us at <a href="mailto:hemen@hemen.co.in">hemen@hemen.co.in</a>
+    </address>
+    <p>
+      <small>This page is an example and may not be fully accessible in all browsers.</small>
+    </p>
+  </footer>
+
+  <dialog id="myDialog">
+    <form method="dialog">
+      <p>This is a <code>&lt;dialog&gt;</code> element. It is semantic and accessible.</p>
+      <button>Close</button>
+    </form>
+  </dialog>
+  <button onclick="document.getElementById('myDialog').showModal()">Open dialog</button>
+
+  <script>
+    const volume = document.getElementById('volume');
+    const output = document.querySelector('output[name="volumeOutput"]');
+    if (volume && output) {
+      volume.addEventListener('input', () => {
+        output.value = volume.value;
+      });
+    }
+  </script>
+</body>
+</html>
