@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Hemen Lahkar" />
+    <title>Event Delegation</title>
+    <style>
+      li {
+        cursor: pointer;
+        padding: 8px;
+        margin: 4px;
+        background: #eee;
+      }
+      li.selected {
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Event Delegation Demo</h2>
+    <ul id="list">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+    <input id="newItem" placeholder="New item" />
+    <button id="addBtn">Add Item</button>
+    <button id="delBtn">Delete Selected</button>
+
+    <script>
+      const list = document.getElementById("list");
+      const newItem = document.getElementById("newItem");
+      const addBtn = document.getElementById("addBtn");
+      const delBtn = document.getElementById("delBtn");
+
+      list.addEventListener("click", function (e) {
+        const li = e.target.closest("li");
+        if (!li) return;
+        li.classList.toggle("selected");
+      });
+
+      addBtn.addEventListener("click", function () {
+        const text = newItem.value.trim();
+        if (!text) return;
+        const li = document.createElement("li");
+        li.textContent = text;
+        list.appendChild(li);
+        newItem.value = "";
+      });
+
+      delBtn.addEventListener("click", function () {
+        const selected = list.querySelectorAll("li.selected");
+        if (selected) selected.forEach((e) => e.remove());
+      });
+    </script>
+  </body>
+</html>
