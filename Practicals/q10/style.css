@@ -1,0 +1,53 @@
+body {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+}
+
+main {
+  background-color: rgb(237, 150, 150);
+  padding: 3rem 0;
+  border-radius: 1rem;
+}
+
+form {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+form > div:first-child {
+  flex-direction: row;
+  gap: 0.3rem;
+}
+
+input,
+textarea {
+  padding: 6px 4px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  border: none;
+  outline: 1px solid #8f0000;
+}
+
+input:focus {
+  outline-color: red;
+}
+
+button {
+  padding: 8px;
+  background-color: #8f0000;
+  color: white;
+  font-weight: bolder;
+  font-size: 1.4rem;
+  border-radius: 1rem;
+  border: none;
+}

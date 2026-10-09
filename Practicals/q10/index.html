@@ -1,0 +1,41 @@
+<!-- Build a registration form with fields for name, email, password,
+date of birth, address and other such fields with a submit button.
+Include appropriate input types, labels and placeholders -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration From</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <form>
+        <div>
+          <div>
+            <label for="fname">First name</label>
+            <input type="text" id="fname" name="fname" placeholder="John" />
+          </div>
+          <div>
+            <label for="lname">Last name</label>
+            <input type="text" id="lname" name="lname" placeholder="Doe" />
+          </div>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="john@example.com" />
+        </div>
+        <div>
+          <label for="dob">Date of birth</label>
+          <input type="date" name="dob" id="dob" />
+        </div>
+        <div>
+          <label for="address">Address</label>
+          <textarea name="address" id="address" rows="5" placeholder="Enter your address here"></textarea>
+        </div>
+        <button type="submit">Register</button>
+      </form>
+    </main>
+  </body>
+</html>
