@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  height: 100dvh;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+button {
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    border: 1px solid rgb(139, 139, 139);
+    background: yellow;
+    color: blue;
+    cursor: pointer;
+    transition: all 250ms;
+}
+
+button:hover {
+    background: blue;
+    color: yellow;
+}
