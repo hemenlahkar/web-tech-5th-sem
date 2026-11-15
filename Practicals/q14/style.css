@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  height: 100dvh;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  background-color: beige;
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+form > div {
+    margin-block: 1rem;
+}
+
+.name {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
+  grid-template-areas:
+    "fnameL lnameL"
+    "fname lname";
+  column-gap: 0.4rem;
+}
+
+.name #fnameLabel {
+  grid-area: fnameL;
+}
+
+.name #fname {
+  grid-area: fname;
+}
+
+.name #lnameLabel {
+  grid-area: lnameL;
+}
+
+.name #lname {
+  grid-area: lname;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  font-size: 1.2rem;
+  background-color: rgba(247, 211, 217, 0.744);
+  border: 1px solid rgb(239, 104, 127);
+  outline-color: red;
+}
+
+#fname,
+#lname {
+  border-radius: 0.3rem;
+  padding: 4px 0.4rem;
+}
+
+#email {
+  padding: 8px 0.4rem;
+  border-radius: 0.4rem;
+}
+
+#dateOfBirth {
+    padding: 6px 0.4rem;
+    border-radius: 0.4rem;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: .5rem;
+    border-radius: 9999px;
+    background: linear-gradient(to bottom, rgb(1, 211, 1), darkgreen);
+    color: white;
+    border-color: darkgreen;
+    cursor: pointer;
+}
+
+input[type="submit"]:active {
+    background: linear-gradient(to top, rgb(1, 211, 1), darkgreen);
+}
