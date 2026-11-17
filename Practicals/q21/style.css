@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
