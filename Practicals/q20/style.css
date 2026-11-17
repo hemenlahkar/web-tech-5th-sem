@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    font-size: 1rem;
+    padding: 3px 4px;
+}
+
+button[type="submit"] {
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    background: rgb(61, 61, 255);
+    color: white;
+    cursor: pointer;
+}
