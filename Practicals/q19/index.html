@@ -1,0 +1,29 @@
+<!-- Build a form with input fields for name and email.
+ When the form is submitted, use innerHTML to display a
+ confirmation message with the entered name and email on the webpage.  -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <form id="myForm">
+        <div id="nameContainer">
+            <label for="name">Full Name:</label>
+            <input type="text" name="name" id="name" placeholder="John Doe">
+        </div>
+        <div id="mailContainer">
+            <label for="mail">Email:</label>
+            <input type="email" name="email" id="mail" placeholder="john@example.com">
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
