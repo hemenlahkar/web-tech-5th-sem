@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+button {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    background-color: aquamarine;
+    cursor: pointer;
+}
+
+#para {
+    font-size: 2rem;
+}
